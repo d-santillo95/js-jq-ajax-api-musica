@@ -35,7 +35,7 @@ header img {
 }
 
 .cd {
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
@@ -45,6 +45,10 @@ header img {
     height: 360px;
     background: rgb(46, 58, 70);
     text-align: center;
+}
+
+.cd.active{
+    display: flex;
 }
 
 .cd img {
