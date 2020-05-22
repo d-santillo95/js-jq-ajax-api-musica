@@ -5,14 +5,7 @@ $(document).ready(function() {
         success: function(data) {
             var template = Handlebars.compile($('#cd-template').html());
             for (var i = 0; i < data.response.length; i++) {
-                var disc = {
-                img : data.response[i].poster,
-                title : data.response[i].title,
-                author : data.response[i].author,
-                year : data.response[i].year,
-                genre : data.response[i].genre
-                };
-                var html = template(disc);
+                var html = template(data.response[i]);
                 $('.cds-container').append(html);
             }
         },
